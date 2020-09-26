@@ -20,24 +20,6 @@
               >
                 Dashboard
               </jet-nav-link>
-              <jet-nav-link
-                href="/profile"
-                :active="$page.currentRouteName == 'dashboard'"
-              >
-                Profile
-              </jet-nav-link>
-              <jet-nav-link
-                href="/community"
-                :active="$page.currentRouteName == 'dashboard'"
-              >
-                Community
-              </jet-nav-link>
-              <jet-nav-link
-                href="/settings"
-                :active="$page.currentRouteName == 'dashboard'"
-              >
-                Settings
-              </jet-nav-link>
             </div>
           </div>
 

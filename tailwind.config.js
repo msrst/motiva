@@ -16,8 +16,10 @@ module.exports = {
         },
         colors: {
             green: '#1aae9f',
-            blue: '#007ace',
-            red: '#de3618',
+            purple: '#6558F5',
+            grey: '#DFE6ED',
+            yellow: '#F7C325',
+            lightgrey: '#F7F9FA',
           }
     },
 
@@ -27,5 +29,5 @@ module.exports = {
 
     plugins: [require('@tailwindcss/ui')],
 
-   
+
 };
