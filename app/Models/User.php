@@ -27,6 +27,14 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        // 'role_id',
+        'teacher_id', // null=teacher, not null = user id of the corresponding teacher 
+        'points',
+        'hair_id',
+        'face_id',
+        'torso_id',
+        'legs_id',
+        'accessory_id',
     ];
 
     /**
