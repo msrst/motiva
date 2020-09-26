@@ -19,9 +19,10 @@ class ExtendUserAddTeacherTasksItems extends Migration
             $table->date('due_date')->nullable();
         });
 
-        Schema::create('task_student', function (Blueprint $table) {
+        // tasks <-> student
+        Schema::create('task_user', function (Blueprint $table) {
             $table->foreignId('task_id')->constrained();
-            $table->foreignId('student_id')->constrained('users');
+            $table->foreignId('user_id')->constrained();
         });
 
         Schema::create('items', function (Blueprint $table) {
@@ -32,9 +33,9 @@ class ExtendUserAddTeacherTasksItems extends Migration
             $table->string('type'); // e. g. head, torso
         });
 
-        Schema::create('student_item', function (Blueprint $table) {
-            $table->foreignId('student_id')->constrained('users');
-            $table->foreignId('item')->constrained();
+        Schema::create('item_user', function (Blueprint $table) {
+            $table->foreignId('item_id')->constrained();
+            $table->foreignId('user_id')->constrained();
         });
 
         Schema::table('users', function (Blueprint $table) {
@@ -87,14 +88,14 @@ class ExtendUserAddTeacherTasksItems extends Migration
                 'legs_id',
                 'accessory_id');
         });
-        Schema::dropIfExists('task_student');
+        Schema::dropIfExists('task_user');
         Schema::table('tasks', function (Blueprint $table) {
             $table->dropForeign('tasks_student_id_foreign');
             $table->dropColumn('student_id');
             $table->dropColumn('assignment_date');
             $table->dropColumn('due_date');
         });
-        Schema::dropIfExists('student_item');
+        Schema::dropIfExists('item_user');
         Schema::dropIfExists('items');
     }
 }
