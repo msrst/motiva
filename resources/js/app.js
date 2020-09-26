@@ -10,6 +10,14 @@ Vue.use(InertiaApp);
 Vue.use(InertiaForm);
 Vue.use(PortalVue);
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faTachometerAlt, faTasks, faUsers, faUser, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faTachometerAlt, faTasks, faUsers, faUser, faSignOutAlt )
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+
 const app = document.getElementById('app');
 
 new Vue({

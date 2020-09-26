@@ -4,7 +4,7 @@
           Dashboard
       </template>
       <template>
-
+          Content
       </template>
   </app-layout>
 </template>
