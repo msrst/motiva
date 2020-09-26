@@ -29,12 +29,13 @@
                         icon="user"
                     >
                     </m-nav-link>
-                    <m-nav-link
-                        href="/logout"
-                        method="post"
-                        icon="sign-out-alt"
-                    >
-                    </m-nav-link>
+                    <form @submit.prevent="logout" class="h-full">
+                        <button type="submit" class="h-full">
+                            <font-awesome-icon icon="sign-out-alt" size="3x"></font-awesome-icon>
+                        </button>
+
+                    </form>
+
                 </div>
             </div>
         </nav>

@@ -18,10 +18,11 @@ export default {
     },
     data() {
         return {
-            classes: this.active ?
-                'flex items-center px-2 text-green'
+            classes: ['flex items-center px-2 h-full',
+                this.active ?
+                'text-green'
                 :
-                'flex items-center px-2 text-gray-800 hover:bg-green hover:text-white'
+                'text-gray-800 hover:bg-green hover:text-white']
         }
     }
 }
