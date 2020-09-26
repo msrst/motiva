@@ -14,22 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/dashboard');
 });
-
-Route::get('/test', [\App\Http\Controllers\TestController::class, 'index']);
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function() {
     Route::get('/dashboard', function () {
         return Inertia\Inertia::render('Dashboard');
     })->name('dashboard');
-    Route::get('/worklist', function () {
-        return Inertia\Inertia::render('Dashboard');
-    })->name('dashboard');
-    Route::get('/dashboard', function () {
-        return Inertia\Inertia::render('Dashboard');
-    })->name('dashboard');
-    Route::get('/dashboard', function () {
-        return Inertia\Inertia::render('Dashboard');
-    })->name('dashboard');
+    Route::get('/community', function () {
+        return Inertia\Inertia::render('Community');
+    })->name('community');
+    Route::resources([
+        'tasks' => \App\Http\Controllers\TaskController::class,
+    ]);
 });
