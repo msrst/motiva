@@ -23,12 +23,19 @@ class CreateNewUser implements CreatesNewUsers
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => $this->passwordRules(),
+
         ])->validate();
 
         return User::create([
             'name' => $input['name'],
             'email' => $input['email'],
             'password' => Hash::make($input['password']),
+            'teacher_id' => NULL, // make everyone a teacher TODO this is invalid
+            'hair_id' => NULL,
+            'face_id' => NULL,
+            'torso_id' => NULL,
+            'legs_id' => NULL,
+            'accessory_id' => NULL,
         ]);
     }
 }

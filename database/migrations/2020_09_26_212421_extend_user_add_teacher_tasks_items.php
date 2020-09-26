@@ -38,8 +38,7 @@ class ExtendUserAddTeacherTasksItems extends Migration
         });
 
         Schema::table('users', function (Blueprint $table) {
-            $table->foreignId('teacher_id')
-                    ->references('id')->on('users')->setNullOnDelete()
+            $table->unsignedBigInteger('teacher_id')
                     ->after('two_factor_recovery_codes')
                     ->nullable();
 
@@ -79,20 +78,22 @@ class ExtendUserAddTeacherTasksItems extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropForeign('users_teacher_id_foreign');
-            $table->dropColumn('teacher_id');
-            $table->dropColumn('points',
+            # $table->dropForeign('users_teacher_id_foreign');
+            $table->dropColumn('teacher_id',
+                'points',
                 'hair_id',
                 'face_id',
                 'torso_id',
                 'legs_id',
                 'accessory_id');
         });
+        Schema::dropIfExists('task_student');
         Schema::table('tasks', function (Blueprint $table) {
+            $table->dropForeign('tasks_student_id_foreign');
+            $table->dropColumn('student_id');
             $table->dropColumn('assignment_date');
             $table->dropColumn('due_date');
         });
-        Schema::dropIfExists('task_student');
         Schema::dropIfExists('student_item');
         Schema::dropIfExists('items');
     }
