@@ -14,6 +14,11 @@ module.exports = {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
         },
+        colors: {
+            green: '#1aae9f',
+            blue: '#007ace',
+            red: '#de3618',
+          }
     },
 
     variants: {
@@ -21,4 +26,6 @@ module.exports = {
     },
 
     plugins: [require('@tailwindcss/ui')],
+
+   
 };
