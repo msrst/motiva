@@ -1,7 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a66be3a3-2261-4ac6-a931-b1995918c609" name="Default Changelist" comment="" />
+    <list default="true" id="a66be3a3-2261-4ac6-a931-b1995918c609" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Jetstream/NavLink.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Jetstream/NavLink.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Layouts/AppLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Layouts/AppLayout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +46,10 @@
         <option value="composer.json" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
@@ -131,9 +164,22 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
       <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
       <path value="$PROJECT_DIR$/vendor/laravel/sanctum" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/constant_time_encoding" />
+      <path value="$PROJECT_DIR$/vendor/inertiajs/inertia-laravel" />
+      <path value="$PROJECT_DIR$/vendor/dasprid/enum" />
+      <path value="$PROJECT_DIR$/vendor/mobiledetect/mobiledetectlib" />
+      <path value="$PROJECT_DIR$/vendor/jaybizzle/crawler-detect" />
+      <path value="$PROJECT_DIR$/vendor/jenssegers/agent" />
+      <path value="$PROJECT_DIR$/vendor/bacon/bacon-qr-code" />
+      <path value="$PROJECT_DIR$/vendor/pragmarx/google2fa" />
+      <path value="$PROJECT_DIR$/vendor/laravel/fortify" />
+      <path value="$PROJECT_DIR$/vendor/laravel/jetstream" />
     </include_path>
   </component>
   <component name="ProjectId" id="1i3L0DbvJw3bnkjnVadA4Gr0PH2" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -144,6 +190,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2019.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="PHPUnit.phpunit.xml">
@@ -177,11 +224,35 @@
       <updated>1601131103759</updated>
       <workItem from="1601131104965" duration="1106000" />
       <workItem from="1601132678273" duration="482000" />
+      <workItem from="1601147682703" duration="2349000" />
     </task>
+    <task id="LOCAL-00001" summary="merge">
+      <created>1601147741367</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601147741367</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge" />
   </component>
   <component name="WindowStateProjectService">
     <state x="454" y="311" key="ComposerInitDialogKey" timestamp="1601133770494">
@@ -196,30 +267,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="496" y="109" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601147678682" />
-    <state width="1483" height="217" key="GridCell.Tab.0.bottom" timestamp="1601147680033">
+    <state width="1483" height="217" key="GridCell.Tab.0.bottom" timestamp="1601148815500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="217" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601147680033" />
-    <state width="1483" height="217" key="GridCell.Tab.0.center" timestamp="1601147680033">
+    <state width="1483" height="217" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601148815500" />
+    <state width="1483" height="217" key="GridCell.Tab.0.center" timestamp="1601148815500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="217" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601147680033" />
-    <state width="1483" height="217" key="GridCell.Tab.0.left" timestamp="1601147680033">
+    <state width="1483" height="217" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601148815500" />
+    <state width="1483" height="217" key="GridCell.Tab.0.left" timestamp="1601148815496">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="217" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601147680033" />
-    <state width="1483" height="217" key="GridCell.Tab.0.right" timestamp="1601147680033">
+    <state width="1483" height="217" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601148815496" />
+    <state width="1483" height="217" key="GridCell.Tab.0.right" timestamp="1601148815500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="217" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601147680033" />
+    <state width="1483" height="217" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601148815500" />
+    <state x="154" y="62" key="MergeDialog" timestamp="1601147706952">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="154" y="62" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1601147706952" />
+    <state x="306" y="118" key="MultipleFileMergeDialog" timestamp="1601147710575">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="306" y="118" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1601147710575" />
     <state x="183" y="0" key="SettingsEditor" timestamp="1601147674250">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="183" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1601147674250" />
-    <state width="623" height="498" key="SwitcherDM" timestamp="1601135750918">
+    <state width="623" height="498" key="SwitcherDM" timestamp="1601150042595">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="623" height="498" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1601135750918" />
+    <state width="623" height="498" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1601150042595" />
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1601146348510">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
