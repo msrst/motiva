@@ -10,9 +10,17 @@ Vue.use(InertiaApp);
 Vue.use(InertiaForm);
 Vue.use(PortalVue);
 
+import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
+
+const opts = {}
+
+export default new Vuetify(opts)
+
 const app = document.getElementById('app');
 
 new Vue({
+    Vuetify,
     render: (h) =>
         h(InertiaApp, {
             props: {

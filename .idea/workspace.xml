@@ -145,11 +145,26 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.phpunit.xml">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <configuration name="watch" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="watch" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.watch" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -172,22 +187,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="454" y="311" key="ComposerInitDialogKey/0.0.1536.824@0.0.1536.824" timestamp="1601133770494" />
-    <state width="1483" height="217" key="GridCell.Tab.0.bottom" timestamp="1601131928964">
+    <state width="1483" height="217" key="GridCell.Tab.0.bottom" timestamp="1601145462216">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="217" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601131928964" />
-    <state width="1483" height="217" key="GridCell.Tab.0.center" timestamp="1601131928963">
+    <state width="1483" height="217" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601145462216" />
+    <state width="1483" height="217" key="GridCell.Tab.0.center" timestamp="1601145462216">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="217" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601131928963" />
-    <state width="1483" height="217" key="GridCell.Tab.0.left" timestamp="1601131928963">
+    <state width="1483" height="217" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601145462216" />
+    <state width="1483" height="217" key="GridCell.Tab.0.left" timestamp="1601145462216">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="217" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601131928963" />
-    <state width="1483" height="217" key="GridCell.Tab.0.right" timestamp="1601131928964">
+    <state width="1483" height="217" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601145462216" />
+    <state width="1483" height="217" key="GridCell.Tab.0.right" timestamp="1601145462216">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="217" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601131928964" />
+    <state width="1483" height="217" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601145462216" />
     <state width="623" height="498" key="SwitcherDM" timestamp="1601135750918">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
