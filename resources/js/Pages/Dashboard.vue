@@ -47,7 +47,6 @@
     </div>
 
     <div class="max-w-sm shadow-lg rounded-lg overflow-hidden my-4 bg-gray-300 ml-32">
-        <img class="w-32 h-320 mx-auto object-cover object-center" src="https://media.discordapp.net/attachments/759407593822093332/759520636740960276/untitled_4.png" alt="avatar">
         <div class="px-6 py-3 bg-gray-700">
             <h1 class="text-center text-white font-semibold text-lg">{{$page.user.name}}</h1>
         </div>
