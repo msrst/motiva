@@ -29,6 +29,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function() {
     Route::resources([
         'tasks' => \App\Http\Controllers\TaskController::class,
     ]);
+    Route::resources([
+        'taskDetail' => \App\Http\Controllers\TaskDetail::class,
+    ]);
 
     Route::put('users/{user}', [\App\Http\Controllers\UserController::class, 'update']);
 });
