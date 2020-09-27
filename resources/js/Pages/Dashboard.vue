@@ -169,7 +169,7 @@
                 <td class="p-8">10</td>
               </tr>
               <tr>
-                <td class="p-8">#5</td>
+                <td class="p-8">#6</td>
                 <td>
                   <img
                     class="w-5 h-320 mx-auto object-cover"
