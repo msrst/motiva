@@ -60,13 +60,19 @@ class TaskDetail extends Controller
         $task_user = TaskUser::where("task_id", $request->input('task_id'))
                 ->where("user_id", $request->input("user_id"))
                 ->first();
+        $user = User::where('id', $request->input("user_id"))
+                ->first();
         if($done) {
             # set it to undone again
             $task_user->finished_date = NULL;
+
+            $user->points -= 1;
         }
         else {
             # set it to done
             $task_user->finished_date = time();
+
+            $user->points += 1;
         }
         $task_user->update();
 
