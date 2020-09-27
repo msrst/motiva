@@ -5,7 +5,7 @@
     </template>
 
     <div>
-      <avatar> </avatar>
+      <avatar :items="$page.items"></avatar>
       <div class="flex justify-center">
         <jet-button
           type="button"

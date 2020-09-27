@@ -28,11 +28,11 @@ class User extends Authenticatable
         'email',
         'password',
         // 'role_id',
-        'teacher_id', // null=teacher, not null = user id of the corresponding teacher 
+        'teacher_id', // null=teacher, not null = user id of the corresponding teacher
         'points',
         'hair_id',
         'face_id',
-        'torso_id',
+        'body_id',
         'legs_id',
         'accessory_id',
     ];
@@ -67,7 +67,7 @@ class User extends Authenticatable
         'profile_photo_url',
         'is_teacher',
     ];
-    
+
     /**
      * Returns whether this user is a teacher.
      */
@@ -75,7 +75,7 @@ class User extends Authenticatable
     {
         return($this->teacher_id == NULL);
     }
-    
+
     /**
      * Get the tasks created by this teacher.
      */
