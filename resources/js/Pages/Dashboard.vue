@@ -5,7 +5,7 @@
       <!-- component -->
       <li class="flex flex-row">
         <div
-          class="max-w-sm shadow-lg rounded-lg overflow-hidden my-4 bg-gray-300 ml-32"
+          class="max-w-full shadow-lg rounded-lg overflow-hidden my-4 bg-gray-300 ml-32"
         >
           <img
             class="w-32 h-320 mx-auto object-cover object-center"
@@ -31,7 +31,7 @@
                   {{ $page.user.dailypoints }}/10
                 </div>
               </div>
-              <div class="mx-auto pt-3">
+              <div class="mx-auto pt-1">
                 <font-awesome-icon
                   icon="sad-tear"
                   v-if="$page.user.dailypoints < 10"
@@ -74,9 +74,9 @@
         </div>
         <ul>
           <div
-            class="w-full shadow-lg rounded-lg overflow-hidden my-4 bg-gray-300 ml-32 mt-16"
+            class="px-8 shadow-lg rounded-lg overflow-hidden my-4 bg-gray-300 ml-32 mt-4"
           >
-            <h2 class="ml-4 text-gray-700 text-2xl font-weight-bold">Tasks</h2>
+            <h2 class="text-gray-700 text-2xl font-weight-bold">Tasks</h2>
             <div class="px-4 py-6 bg-gray-300">
               <div class="bg-gray-200 p-1">
                 <div
@@ -90,10 +90,98 @@
 
             <!-- component -->
           </div>
+
           <div
-            class="w-full shadow-lg rounded-lg overflow-hidden my-4 bg-gray-300 ml-32 mt-16"
+            class="mt-16 shadow-lg rounded-lg bg-gray-300 ml-32 overflow-y-auto h-2/3"
           >
-            <div class="px-64 py-48 bg-gray-300"></div>
+            <table class="px-64">
+              <tr class="bg-gray-500 p-8">
+                <td class="w-full text-gray-100 py-4 px-16 text-2xl">
+                  Ranking Table
+                </td>
+                <td class="bg-gray-500 p-8"></td>
+                <td class="bg-gray-500 p-8"></td>
+                <td class="bg-gray-500 p-8"></td>
+              </tr>
+              <tr>
+                <td class="p-8">#1</td>
+                <td>
+                  <img
+                    class="w-5 h-320 mx-auto object-cover"
+                    src="https://media.discordapp.net/attachments/759407593822093332/759520636740960276/untitled_4.png"
+                    alt="avatar"
+                  />
+                </td>
+
+                <td class="p-8">{{ $page.user.name }}</td>
+                <td class="p-8">250</td>
+              </tr>
+              <tr>
+                <td class="p-8">#2</td>
+                <td>
+                  <img
+                    class="w-5 h-320 mx-auto object-cover"
+                    src="https://media.discordapp.net/attachments/759407593822093332/759520636740960276/untitled_4.png"
+                    alt="avatar"
+                  />
+                </td>
+
+                <td class="p-8">Hermione</td>
+                <td class="p-8">240</td>
+              </tr>
+              <tr>
+                <td class="p-8">#3</td>
+                <td>
+                  <img
+                    class="w-5 h-320 mx-auto object-cover"
+                    src="https://media.discordapp.net/attachments/759407593822093332/759520636740960276/untitled_4.png"
+                    alt="avatar"
+                  />
+                </td>
+
+                <td class="p-8">Ron</td>
+                <td class="p-8">130</td>
+              </tr>
+              <tr>
+                <td class="p-8">#4</td>
+                <td>
+                  <img
+                    class="w-5 h-320 mx-auto object-cover"
+                    src="https://media.discordapp.net/attachments/759407593822093332/759520636740960276/untitled_4.png"
+                    alt="avatar"
+                  />
+                </td>
+
+                <td class="p-8">Draco</td>
+                <td class="p-8">100</td>
+              </tr>
+              <tr>
+                <td class="p-8">#5</td>
+                <td>
+                  <img
+                    class="w-5 h-320 mx-auto object-cover"
+                    src="https://media.discordapp.net/attachments/759407593822093332/759520636740960276/untitled_4.png"
+                    alt="avatar"
+                  />
+                </td>
+
+                <td class="p-8">Sam</td>
+                <td class="p-8">10</td>
+              </tr>
+              <tr>
+                <td class="p-8">#5</td>
+                <td>
+                  <img
+                    class="w-5 h-320 mx-auto object-cover"
+                    src="https://media.discordapp.net/attachments/759407593822093332/759520636740960276/untitled_4.png"
+                    alt="avatar"
+                  />
+                </td>
+
+                <td class="p-8">Sam2</td>
+                <td class="p-8">9</td>
+              </tr>
+            </table>
 
             <!-- component -->
           </div>
@@ -110,12 +198,12 @@ import Welcome from "./../Jetstream/Welcome";
 export default {
   components: {
     AppLayout,
-    Welcome,
+    Welcome
   },
 
   computed: {
     progressClasses() {
-      const progress = 2 / 10;
+      const progress = this.$page.user.dailypoints / 10;
       console.log(progress);
       if (progress == 0) return "w-0";
       if (progress == 0.1) return "w-1/10";
@@ -127,6 +215,10 @@ export default {
       if (progress == 0.7) return "w-7/10";
       if (progress == 0.8) return "w-4/5";
       if (progress == 0.9) return "w-9/10";
+      return "w-full";
+    }
+  }
+urn "w-9/10";
       return "w-full";
     },
   },
