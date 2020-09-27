@@ -18,7 +18,7 @@ export default {
     },
     data() {
         return {
-            classes: ['flex items-center px-2 h-full',
+            classes: ['flex items-center px-4 h-full',
                 this.active ?
                 'text-green'
                 :
