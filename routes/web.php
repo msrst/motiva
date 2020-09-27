@@ -15,12 +15,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+use Illuminate\Support\Facades\Auth;
+
 Route::get('/', function () {
     return redirect('/dashboard');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function() {
     Route::get('/dashboard', function () {
+        if(Auth::user()->teacher_id == NULL) {
+            return redirect('/tasks');
+        }
         return Inertia\Inertia::render('Dashboard', ['items' => Item::all(), 'users' => User::latest()->get()]);
     })->name('dashboard');
     Route::get('/community', function () {
