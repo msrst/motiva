@@ -12,7 +12,7 @@
               </tr>
             </thead>
             <tbody class="bg-gray-100">
-              <tr class="hover:bg-white" v-for="task in teacher_tasks">
+              <tr class="hover:bg-white" v-for="task in teacher_tasks" style="cursor: pointer;" @click="go_checking(task.id)">
                 <td class="border px-4 py-2">{{ task.name }}</td>
                 <td class="border px-4 py-2">{{ task.students_done }} / {{ students_count }} </td>
               </tr>
@@ -21,11 +21,11 @@
 
           <div>
             <form @submit.prevent="submit" class="m-3">
-              <label class="px-4 py-1 bg-gray-200" for="name">Name:</label>
+              <label class="px-4 py-1" for="name">Name:</label>
               <input class="px-4 py-1" v-model="form.name" id="name" />
               <label class="px-4 py-1" for="days">Days remaining:</label>
               <input class="px-4 py-1" v-model="form.days" type="number" id="days" min="0" max="365" step="1" value="3" size="6">
-              <button class="px-4 py-1" type="submit">New task</button>
+              <button class="px-4 py-1 bg-gray-200" type="submit">New task</button>
             </form>
           </div>
       </template>
@@ -51,11 +51,15 @@ export default {
   },
   props: {
     teacher_tasks: Array,
-    students_count: Object,
+    students_count: Number,
   },
   methods: {
     submit() {
       this.$inertia.post('/tasks', this.form)
+    },
+    go_checking(task_id) {
+      console.log(task_id)
+      this.$inertia.visit('/taskDetail', {data: {"task_id": task_id}})
     }
   }
 };

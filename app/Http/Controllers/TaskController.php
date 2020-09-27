@@ -52,12 +52,14 @@ class TaskController extends Controller
 
         $now = time();
         $due_date = time() + strtotime(sprintf("+%d days", $request->input('days')));
-        $task = Task::factory(1)->create(['user' => $teacher->id,
-                 'name' => $request->input('name'), 
-                 'assignment_date' => $now, 
-                 'due_date' => $due_date]);
+        $task = new Task;
+        $task->user = $teacher->id;
+        $task->name = $request->input('name');
+        $task->assignment_date = $now;
+        $task->due_date = $due_date;
+        $task->save();
 
-        foreach(User::where('teacher_id', $teacher->id) as $student) {
+        foreach(User::where('teacher_id', $teacher->id)->get() as $student) {
             TaskUser::factory(1)->create(['user_id' => $student->id,
                     'task_id' => $task->id,
                     'assignment_date' => strtotime('27.09.2020'),
