@@ -1,10 +1,14 @@
 <x-guest-layout>
     <x-jet-authentication-card>
-        <x-slot name="logo">
-            <x-jet-authentication-card-logo />
-        </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
+        <x-slot name="logo">
+        <img
+            class="w-90 mx-auto object-cover object-center mr-16"
+            src="https://i.imgur.com/aDkrUri.png"
+            alt="logo"
+          />
+        </x-slot>
 
         @if (session('status'))
             <div class="mb-4 font-medium text-sm text-green-600">

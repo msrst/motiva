@@ -1,7 +1,11 @@
 <x-guest-layout>
     <x-jet-authentication-card>
-        <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+    <x-slot name="logo">
+    <img
+            class="w-90 mx-auto object-cover object-center mr-16"
+            src="https://i.imgur.com/aDkrUri.png1"
+            alt="logo"
+          />
         </x-slot>
 
         <div class="mb-4 text-sm text-gray-600">
