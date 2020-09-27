@@ -30,6 +30,7 @@
                         href="/user/profile"
                         :active="$page.currentRouteName == 'profile.show'"
                         icon="user"
+                        v-if="! $page.user.is_teacher"
                     >
                     </m-nav-link>
                     <form @submit.prevent="logout" class="h-full">
