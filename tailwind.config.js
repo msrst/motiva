@@ -17,6 +17,13 @@ module.exports = {
                 green: "#1aae9f",
                 yellow: "#F7C325",
                 purple: "#730FC3"
+            },
+            minWidth: {
+                '0': '0',
+                '25': '25%',
+                '50': '50%',
+                '75': '75%',
+                'full': '100%',
             }
         }
     },
