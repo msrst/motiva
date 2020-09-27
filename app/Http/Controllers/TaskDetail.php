@@ -75,6 +75,7 @@ class TaskDetail extends Controller
             $user->points += 1;
         }
         $task_user->update();
+        $user->update();
 
         return back();
     }
