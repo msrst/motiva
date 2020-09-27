@@ -218,9 +218,5 @@ export default {
       return "w-full";
     }
   }
-urn "w-9/10";
-      return "w-full";
-    },
-  },
 };
 </script>
