@@ -1,8 +1,6 @@
 <template>
   <app-layout>
-    <template slot="header">
-      Dashboard
-    </template>
+    <template slot="header"> Dashboard </template>
     <template>
       <!-- component -->
       <li class="flex flex-row">
@@ -24,7 +22,7 @@
           <ul class="flex flex-col p-4">
             <li class="border-gray-400 flex flex-row mb-2">
               <div
-                class="select-none cursor-pointer bg-gray-200 rounded-md flex flex-direction-right items-center p-4  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg mr-3"
+                class="select-none cursor-pointer bg-gray-200 rounded-md flex flex-direction-right items-center p-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg mr-3"
               >
                 <div class="flex-1 pl-1 mr-32">
                   <div class="font-medium">Daily Points</div>
@@ -50,10 +48,10 @@
             </li>
             <li class="border-gray-400 flex flex-row mb-2">
               <div
-                class="select-none cursor-pointer bg-gray-200 rounded-md flex flex-1 items-center p-4  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
+                class="select-none cursor-pointer bg-gray-200 rounded-md flex flex-1 items-center p-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
               >
                 <div class="flex-1 pl-1 mr-16">
-                  <div class="font-medium">Weekly Points</div>
+                  <div class="font-medium">Weekly Points: 10</div>
                 </div>
                 <div class="text-gray-600 text-s">
                   {{ $page.user.weeklypoints }}
@@ -62,7 +60,7 @@
             </li>
             <li class="border-gray-400 flex flex-row mb-2">
               <div
-                class="select-none cursor-pointer bg-gray-200 rounded-md flex flex-1 items-center p-4  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
+                class="select-none cursor-pointer bg-gray-200 rounded-md flex flex-1 items-center p-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
               >
                 <div class="flex-1 pl-1 mr-16">
                   <div class="font-medium">Total Points</div>
@@ -78,11 +76,9 @@
           <div
             class="w-full shadow-lg rounded-lg overflow-hidden my-4 bg-gray-300 ml-32 mt-16"
           >
-            <h2 class="ml-4 text-gray-700 text-2xl font-weight-bold">
-              Tasks
-            </h2>
+            <h2 class="ml-4 text-gray-700 text-2xl font-weight-bold">Tasks</h2>
             <div class="px-4 py-6 bg-gray-300">
-              <div class=" bg-gray-200 p-1">
+              <div class="bg-gray-200 p-1">
                 <div
                   class="bg-green text-s leading-none py-1 text-center text-white"
                   :class="progressClasses"
@@ -101,6 +97,7 @@
 
             <!-- component -->
           </div>
+          <div>text</div>
         </ul>
       </li>
     </template>
@@ -114,7 +111,7 @@ import Welcome from "./../Jetstream/Welcome";
 export default {
   components: {
     AppLayout,
-    Welcome
+    Welcome,
   },
 
   computed: {
@@ -132,7 +129,7 @@ export default {
       if (progress == 0.8) return "w-4/5";
       if (progress == 0.9) return "w-9/10";
       return "w-full";
-    }
-  }
+    },
+  },
 };
 </script>
