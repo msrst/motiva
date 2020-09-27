@@ -27,10 +27,10 @@ class ExtendUserAddTeacherTasksItems extends Migration
 
         Schema::create('items', function (Blueprint $table) {
             $table->id();
-            $table->string('name'); // unused
-            $table->string('img_location');
+            $table->string('name');
+            $table->string('url')->nullable();
             $table->unsignedInteger('points')->default(1);
-            $table->string('type'); // e. g. head, torso
+            $table->string('type');
         });
 
         Schema::create('item_user', function (Blueprint $table) {
@@ -45,29 +45,28 @@ class ExtendUserAddTeacherTasksItems extends Migration
 
             $table->unsignedInteger('points')
                     ->after('teacher_id')
-                    ->nullable()
                     ->default(0);
-  
+
             $table->unsignedInteger('hair_id')
                     ->references('id')->on('items')->setNullOnDelete()
                     ->after('teacher_id')
-                    ->nullable();
+                    ->default(1);
             $table->unsignedInteger('face_id')
                     ->references('id')->on('items')->setNullOnDelete()
                     ->after('hair_id')
-                    ->nullable();
-            $table->unsignedInteger('torso_id')
+                    ->default(1);
+            $table->unsignedInteger('body_id')
                     ->references('id')->on('items')->setNullOnDelete()
                     ->after('face_id')
-                    ->nullable();
+                    ->default(1);
             $table->unsignedInteger('legs_id')
                     ->references('id')->on('items')->setNullOnDelete()
-                    ->after('torso_id')
-                    ->nullable();
+                    ->after('body_id')
+                    ->default(1);
             $table->unsignedInteger('accessory_id')
                     ->references('id')->on('items')->setNullOnDelete()
                     ->after('legs_id')
-                    ->nullable();
+                    ->default(1);
         });
     }
 
@@ -84,7 +83,7 @@ class ExtendUserAddTeacherTasksItems extends Migration
                 'points',
                 'hair_id',
                 'face_id',
-                'torso_id',
+                'body_id',
                 'legs_id',
                 'accessory_id');
         });
