@@ -43,9 +43,13 @@
         </nav>
 
         <!-- Page Heading -->
-        <header class="bg-white shadow">
-            <div class="max-w-7xl mx-auto py-2 px-2 sm:px-6 lg:px-8 text-lg">
+        <header class="bg-white shadow flex justify-between px-2 items-center">
+            <div class="max-w-7xl text-lg">
                 <slot name="header"></slot>
+            </div>
+            <div class="flex items-center">
+                <span>{{ $page.user.points }}</span>
+                <img class="w-12" src="/images/carrot_coin.svg">
             </div>
         </header>
 

@@ -3,9 +3,9 @@
     <template slot="header"> Dashboard </template>
     <template>
       <!-- component -->
-      <div class="flex flex-row justify-around mt-16">
+      <div class="flex flex-row flex-wrap justify-around mt-16">
         <div
-          class="w-1/2 max-w-full shadow-lg rounded-lg overflow-hidden bg-gray-200"
+          class="w-full sm:w-1/2 shadow-lg rounded-lg overflow-hidden bg-gray-200"
         >
         <div class="flex justify-center p-4">
             <avatar></avatar>
@@ -74,7 +74,7 @@
             </li>
           </ul>
         </div>
-        <div>
+        <div class="mt-4 sm:mt-0">
           <div
             class="w-full shadow-lg rounded-lg bg-gray-300 overflow-y-scroll h-128"
           >
