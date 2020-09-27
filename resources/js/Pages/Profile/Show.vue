@@ -6,13 +6,14 @@
 
     <div>
       <avatar> </avatar>
-      <jet-button
-        class="text-center"
-        type="button"
-        @click.native="showExtraInformation = !showExtraInformation"
-      >
-        Account Settings
-      </jet-button>
+      <div class="flex justify-center">
+        <jet-button
+          type="button"
+          @click.native="showExtraInformation = !showExtraInformation"
+        >
+          Account Settings
+        </jet-button>
+      </div>
       <div
         v-if="showExtraInformation"
         class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8"

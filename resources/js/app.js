@@ -19,12 +19,12 @@ import {
     faSignOutAlt,
     faSadTear,
     faCheckCircle,
-    faArrowUp, faArrowDown, faPizzaSlice, faCheckSquare, faClipboardCheck
+    faArrowUp, faArrowDown, faPizzaSlice, faCheckSquare, faClipboardCheck, faArrowRight, faArrowLeft
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 library.add(faTachometerAlt, faTasks, faUsers, faUser, faSignOutAlt, faSadTear, faCheckCircle, faArrowUp, faArrowDown,
-    faPizzaSlice, faCheckSquare, faClipboardCheck)
+    faPizzaSlice, faCheckSquare, faClipboardCheck, faArrowRight, faArrowLeft)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

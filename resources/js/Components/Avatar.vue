@@ -9,17 +9,29 @@
       <div class="flex justify-around">
         <div class="max-w-sm shadow-lg rounded-lg overflow-hidden bg-white-300">
           <ul class="flex flex-col justify-evenly p-4 h-full">
-            <li
-              class="border-gray-400 flex flex-row mb-2"
-              @click="currentSelection = 1"
-            >
+            <li class="border-gray-400 flex flex-row items-center mb-2">
+              <font-awesome-icon
+                v-if="hairID !== 0"
+                class="cursor-pointer mr-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
+                icon="arrow-left"
+                size="2x"
+                @click="hairID = hairID - 1"
+              >
+              </font-awesome-icon>
               <div
-                class="select-none cursor-pointer bg-gray-200 rounded-md flex flex-1 items-center p-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
+                class="select-none bg-gray-200 rounded-md flex flex-1 items-center p-4"
               >
                 <div class="flex-1 pl-1 mr-16">
                   <div class="font-medium">Hair</div>
                 </div>
               </div>
+              <font-awesome-icon
+                class="cursor-pointer ml-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
+                icon="arrow-right"
+                size="2x"
+                @click="hairID = hairID + 1"
+              >
+              </font-awesome-icon>
             </li>
             <li
               class="border-gray-400 flex flex-row mb-2"
@@ -71,12 +83,13 @@
             </li>
           </ul>
         </div>
-        <div class="max-w-sm overflow-hidden my-4 bg-white-300">
+        <div class="max-w-sm overflow-hidden my-4 bg-white-300 relative">
           <img
-            class="w-32 h-320 mx-auto object-cover object-center"
+            class=""
             src="https://cdn.discordapp.com/attachments/759407593822093332/759592594556059658/Model.svg"
             alt="avatar"
           />
+          <img class="h-48" src="/images/Pigtail.svg" alt="avatar" />
         </div>
       </div>
     </div>
@@ -88,7 +101,13 @@ export default {
   data() {
     return {
       currentSelection: 0,
+      hairID: 0,
+      hairIDs: [],
     };
+  },
+  mounted() {
+    this.hairID = this.$page.user.hairID;
+    this.hairIDs = this.$page.hairIDs;
   },
   methods: {},
 };
