@@ -18,6 +18,16 @@
               </tr>
             </tbody>
           </table>
+
+          <div>
+            <form @submit.prevent="submit" class="m-3">
+              <label class="px-4 py-1 bg-gray-200" for="name">Name:</label>
+              <input class="px-4 py-1" v-model="form.name" id="name" />
+              <label class="px-4 py-1" for="days">Days remaining:</label>
+              <input class="px-4 py-1" v-model="form.days" type="number" id="days" min="0" max="365" step="1" value="3" size="6">
+              <button class="px-4 py-1" type="submit">New task</button>
+            </form>
+          </div>
       </template>
   </app-layout>
 </template>
@@ -28,6 +38,14 @@
 import AppLayout from "./../Layouts/AppLayout";
 
 export default {
+  data() {
+    return {
+      form: {
+        name: null,
+        days: null
+      },
+    }
+  },
   components: {
     AppLayout,
   },
@@ -35,5 +53,10 @@ export default {
     teacher_tasks: Array,
     students_count: Object,
   },
+  methods: {
+    submit() {
+      this.$inertia.post('/tasks', this.form)
+    }
+  }
 };
 </script>
