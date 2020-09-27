@@ -34,6 +34,7 @@ class UserFactory extends Factory
             'legs_id' => Item::query()->where('type', 'legs')->inRandomOrder()->first()->id,
             'accessory_id' => Item::query()->where('type', 'accessory')->inRandomOrder()->first()->id,
             'remember_token' => Str::random(10),
+            'points' => $this->faker->numberBetween(0, 100),
         ];
     }
 }
