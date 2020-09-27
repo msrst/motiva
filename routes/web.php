@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Item;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,7 +21,7 @@ Route::get('/', function () {
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function() {
     Route::get('/dashboard', function () {
-        return Inertia\Inertia::render('Dashboard');
+        return Inertia\Inertia::render('Dashboard', ['items' => Item::all(), 'users' => User::latest()->get()]);
     })->name('dashboard');
     Route::get('/community', function () {
         return Inertia\Inertia::render('Community');

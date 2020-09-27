@@ -5,13 +5,11 @@
       <!-- component -->
       <li class="flex flex-row">
         <div
-          class="max-w-full shadow-lg rounded-lg overflow-hidden my-16 bg-gray-300 ml-32"
+          class="max-w-full shadow-lg rounded-lg overflow-hidden my-16 bg-gray-200 ml-32"
         >
-          <img
-            class="w-32 mx-auto object-cover object-center"
-            src="https://media.discordapp.net/attachments/759407593822093332/759520636740960276/untitled_4.png"
-            alt="avatar"
-          />
+            <div class="flex justify-center p-4">
+                <avatar></avatar>
+            </div>
           <div class="px-6 py-3 bg-gray-700">
             <h1 class="text-center text-white font-semibold text-lg">
               {{ $page.user.name }}
@@ -20,7 +18,7 @@
 
           <!-- component -->
           <ul class="flex flex-col p-4">
-            <li class="border-gray-400 flex flex-row mb-2">
+            <li class="border-gray-200 flex flex-row mb-2">
               <div
                 class="select-none cursor-pointer bg-gray-200 rounded-md flex flex-direction-right items-center p-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg mr-3"
               >
@@ -28,13 +26,13 @@
                   <div class="font-medium">Daily Points</div>
                 </div>
                 <div class="text-gray-600 text-s">
-                  {{ $page.user.dailypoints }}/10
+                  {{ dailyPoints }}/10
                 </div>
               </div>
               <div class="mx-auto pt-1">
                 <font-awesome-icon
                   icon="sad-tear"
-                  v-if="$page.user.dailypoints < 10"
+                  v-if="dailyPoints < 10"
                   size="3x"
                   class="p-2 text-yellow bg-gray-400 rounded-md"
                 ></font-awesome-icon>
@@ -74,16 +72,16 @@
         </div>
         <ul>
           <div
-            class="w-full px-8 shadow-lg rounded-lg overflow-hidden my-4 bg-gray-300 ml-32 mt-16"
+            class="w-full px-8 py-4 shadow-lg rounded-lg overflow-hidden my-4 bg-gray-200 ml-32 mt-16"
           >
             <h2 class="text-gray-700 text-2xl font-weight-bold">Tasks</h2>
-            <div class="px-4 py-6 bg-gray-300">
+            <div class="px-4 py-6 bg-gray-200">
               <div class="bg-gray-200 p-1">
                 <div
-                  class="bg-green text-s leading-none py-1 text-center text-white"
+                  class="bg-green text-s leading-none py-1 px-1 text-center text-white"
                   :class="progressClasses"
                 >
-                  {{ $page.user.dailypoints }}/10
+                  {{ dailyPoints }} / 10
                 </div>
               </div>
             </div>
@@ -92,9 +90,9 @@
           </div>
 
           <div
-            class="w-full mt-16 shadow-lg rounded-lg bg-gray-300 ml-32 overflow-y-auto h-2/3"
+            class="w-full mt-16 shadow-lg rounded-lg bg-gray-300 ml-32 overflow-y-scroll h-128"
           >
-            <table class="px-64">
+            <table class="h-128">
               <tr class="bg-gray-500 p-8">
                 <td class="w-full text-gray-100 py-4 px-8 text-2xl">
                   Ranking Table
@@ -103,83 +101,21 @@
                 <td class="bg-gray-500 p-8"></td>
                 <td class="bg-gray-500 p-8"></td>
               </tr>
-              <tr>
-                <td class="p-8">#1</td>
+              <tr v-for="(user, index) in $page.users">
+                <td class="p-8">#{{index}}</td>
                 <td>
-                  <img
-                    class="w-5 h-320 mx-auto object-cover"
-                    src="https://media.discordapp.net/attachments/759407593822093332/759520636740960276/untitled_4.png"
-                    alt="avatar"
-                  />
+                    <avatar
+                        size="5"
+                        :hair-id="user.hair_id"
+                        :face-id="user.face_id"
+                        :body-id="user.body_id"
+                        :legs-id="user.legs_id"
+                        :accessory-id="user.accessory_id"
+                        ></avatar>
                 </td>
 
                 <td class="p-8">{{ $page.user.name }}</td>
                 <td class="p-8">250</td>
-              </tr>
-              <tr>
-                <td class="p-8">#2</td>
-                <td>
-                  <img
-                    class="w-5 h-320 mx-auto object-cover"
-                    src="https://media.discordapp.net/attachments/759407593822093332/759520636740960276/untitled_4.png"
-                    alt="avatar"
-                  />
-                </td>
-
-                <td class="p-8">Hermione</td>
-                <td class="p-8">240</td>
-              </tr>
-              <tr>
-                <td class="p-8">#3</td>
-                <td>
-                  <img
-                    class="w-5 h-320 mx-auto object-cover"
-                    src="https://media.discordapp.net/attachments/759407593822093332/759520636740960276/untitled_4.png"
-                    alt="avatar"
-                  />
-                </td>
-
-                <td class="p-8">Ron</td>
-                <td class="p-8">130</td>
-              </tr>
-              <tr>
-                <td class="p-8">#4</td>
-                <td>
-                  <img
-                    class="w-5 h-320 mx-auto object-cover"
-                    src="https://media.discordapp.net/attachments/759407593822093332/759520636740960276/untitled_4.png"
-                    alt="avatar"
-                  />
-                </td>
-
-                <td class="p-8">Draco</td>
-                <td class="p-8">100</td>
-              </tr>
-              <tr>
-                <td class="p-8">#5</td>
-                <td>
-                  <img
-                    class="w-5 h-320 mx-auto object-cover"
-                    src="https://media.discordapp.net/attachments/759407593822093332/759520636740960276/untitled_4.png"
-                    alt="avatar"
-                  />
-                </td>
-
-                <td class="p-8">Sam</td>
-                <td class="p-8">10</td>
-              </tr>
-              <tr>
-                <td class="p-8">#6</td>
-                <td>
-                  <img
-                    class="w-5 h-320 mx-auto object-cover"
-                    src="https://media.discordapp.net/attachments/759407593822093332/759520636740960276/untitled_4.png"
-                    alt="avatar"
-                  />
-                </td>
-
-                <td class="p-8">Sam2</td>
-                <td class="p-8">9</td>
               </tr>
             </table>
 
@@ -194,27 +130,31 @@
 <script>
 import AppLayout from "./../Layouts/AppLayout";
 import Welcome from "./../Jetstream/Welcome";
+import Avatar from "../Components/Avatar";
 
 export default {
   components: {
     AppLayout,
-    Welcome
+    Welcome,
+      Avatar
   },
 
   computed: {
+      dailyPoints() {
+          return this.$page.user.dailypoints || 0
+      },
     progressClasses() {
-      const progress = this.$page.user.dailypoints / 10;
-      console.log(progress);
-      if (progress == 0) return "w-0";
-      if (progress == 0.1) return "w-1/10";
-      if (progress == 0.2) return "w-1/5";
-      if (progress == 0.3) return "w-3/10";
-      if (progress == 0.4) return "w-2/5";
-      if (progress == 0.5) return "w-1/2";
-      if (progress == 0.6) return "w-3/5";
-      if (progress == 0.7) return "w-7/10";
-      if (progress == 0.8) return "w-4/5";
-      if (progress == 0.9) return "w-9/10";
+      const progress = this.dailyPoints / 10;
+      if (progress === 0) return "w-0";
+      if (progress === 0.1) return "w-1/10";
+      if (progress === 0.2) return "w-1/5";
+      if (progress === 0.3) return "w-3/10";
+      if (progress === 0.4) return "w-2/5";
+      if (progress === 0.5) return "w-1/2";
+      if (progress === 0.6) return "w-3/5";
+      if (progress === 0.7) return "w-7/10";
+      if (progress === 0.8) return "w-4/5";
+      if (progress === 0.9) return "w-9/10";
       return "w-full";
     }
   }

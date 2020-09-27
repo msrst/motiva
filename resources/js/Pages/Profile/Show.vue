@@ -5,7 +5,7 @@
     </template>
 
     <div>
-      <avatar :items="$page.items"></avatar>
+      <avatar-edit :items="$page.items"></avatar-edit>
       <div class="flex justify-center">
         <jet-button
           type="button"
@@ -34,7 +34,7 @@ import AppLayout from "./../../Layouts/AppLayout";
 import UpdatePasswordForm from "./UpdatePasswordForm";
 import UpdateProfileInformationForm from "./UpdateProfileInformationForm";
 import JetButton from "./../../Jetstream/Button";
-import Avatar from "./../../Components/Avatar";
+import AvatarEdit from "./../../Components/AvatarEdit";
 
 export default {
   props: ["sessions"],
@@ -44,7 +44,7 @@ export default {
     UpdatePasswordForm,
     UpdateProfileInformationForm,
     JetButton,
-    Avatar,
+    AvatarEdit,
   },
   data() {
     return {
