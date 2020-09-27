@@ -36,16 +36,14 @@
                         <button type="submit" class="h-full">
                             <font-awesome-icon icon="sign-out-alt" size="3x"></font-awesome-icon>
                         </button>
-
                     </form>
-
                 </div>
             </div>
         </nav>
 
         <!-- Page Heading -->
         <header class="bg-white shadow">
-            <div class="max-w-7xl mx-auto py-2 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto py-2 px-2 sm:px-6 lg:px-8 text-lg">
                 <slot name="header"></slot>
             </div>
         </header>
