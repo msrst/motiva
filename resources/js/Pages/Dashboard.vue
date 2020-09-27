@@ -5,7 +5,7 @@
       <!-- component -->
       <li class="flex flex-row">
         <div
-          class="max-w-sm shadow-lg rounded-lg overflow-hidden my-4 bg-gray-300 ml-32"
+          class="max-w-full shadow-lg rounded-lg overflow-hidden my-4 bg-gray-300 ml-32"
         >
           <img
             class="w-32 h-320 mx-auto object-cover object-center"
@@ -74,7 +74,7 @@
         </div>
         <ul>
           <div
-            class="w-full shadow-lg rounded-lg overflow-hidden my-4 bg-gray-300 ml-32 mt-16"
+            class="h-3200 max-w-full shadow-lg rounded-lg overflow-hidden my-4 bg-gray-300 ml-32"
           >
             <h2 class="ml-4 text-gray-700 text-2xl font-weight-bold">Tasks</h2>
             <div class="px-4 py-6 bg-gray-300">
@@ -90,10 +90,96 @@
 
             <!-- component -->
           </div>
+
           <div
-            class="w-full shadow-lg rounded-lg overflow-hidden my-4 bg-gray-300 ml-32 mt-16"
+            class="w-50 h-80 shadow-lg rounded-lg bg-gray-300 ml-32 overflow-y-auto h-60"
           >
-            <div class="px-64 py-48 bg-gray-300"></div>
+            <table class="px-64">
+              <tr class="bg-gray-500 p-8">
+                <td class="p-8"></td>
+                <td class="p-8">Ranking Table</td>
+                <td class="p-8"></td>
+                <td class="p-8"></td>
+              </tr>
+              <tr>
+                <td class="p-8">#1</td>
+                <td>
+                  <img
+                    class="w-5 h-320 mx-auto object-cover"
+                    src="https://media.discordapp.net/attachments/759407593822093332/759520636740960276/untitled_4.png"
+                    alt="avatar"
+                  />
+                </td>
+
+                <td class="p-8">{{ $page.user.name }}</td>
+                <td class="p-8">250</td>
+              </tr>
+              <tr>
+                <td class="p-8">#2</td>
+                <td>
+                  <img
+                    class="w-5 h-320 mx-auto object-cover"
+                    src="https://media.discordapp.net/attachments/759407593822093332/759520636740960276/untitled_4.png"
+                    alt="avatar"
+                  />
+                </td>
+
+                <td class="p-8">Sam</td>
+                <td class="p-8">200</td>
+              </tr>
+               <tr>
+                <td class="p-8">#3</td>
+                <td>
+                  <img
+                    class="w-5 h-320 mx-auto object-cover"
+                    src="https://media.discordapp.net/attachments/759407593822093332/759520636740960276/untitled_4.png"
+                    alt="avatar"
+                  />
+                </td>
+
+                <td class="p-8">Sam</td>
+                <td class="p-8">200</td>
+              </tr>
+               <tr>
+                <td class="p-8">#4</td>
+                <td>
+                  <img
+                    class="w-5 h-320 mx-auto object-cover"
+                    src="https://media.discordapp.net/attachments/759407593822093332/759520636740960276/untitled_4.png"
+                    alt="avatar"
+                  />
+                </td>
+
+                <td class="p-8">Sam</td>
+                <td class="p-8">200</td>
+              </tr>
+               <tr>
+                <td class="p-8">#5</td>
+                <td>
+                  <img
+                    class="w-5 h-320 mx-auto object-cover"
+                    src="https://media.discordapp.net/attachments/759407593822093332/759520636740960276/untitled_4.png"
+                    alt="avatar"
+                  />
+                </td>
+
+                <td class="p-8">Sam</td>
+                <td class="p-8">200</td>
+              </tr>
+               <tr>
+                <td class="p-8">#5</td>
+                <td>
+                  <img
+                    class="w-5 h-320 mx-auto object-cover"
+                    src="https://media.discordapp.net/attachments/759407593822093332/759520636740960276/untitled_4.png"
+                    alt="avatar"
+                  />
+                </td>
+
+                <td class="p-8">Sam3</td>
+                <td class="p-8">200</td>
+              </tr>
+            </table>
 
             <!-- component -->
           </div>
