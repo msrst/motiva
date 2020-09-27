@@ -65,5 +65,40 @@ class User extends Authenticatable
      */
     protected $appends = [
         'profile_photo_url',
+        'is_teacher',
     ];
+    
+    /**
+     * Returns whether this user is a teacher.
+     */
+    public function getIsTeacherAttribute($value)
+    {
+        return($this->teacher_id == NULL);
+    }
+    
+    /**
+     * Get the tasks created by this teacher.
+     */
+    public function teacher_tasks()
+    {
+        // uses the user_id foreign key of the tasks table
+        return $this->hasMany('App\Models\Task', 'student_id');
+    }
+
+    /**
+     * Get the tasks assigned to this student.
+     */
+    public function student_tasks()
+    {
+        // uses the task_user table
+        return $this->belongsToMany('App\Models\Task');
+    }
+
+    /**
+     * Get all avatar items owned by this student.
+     */
+    public function student_items()
+    {
+        return $this->belongsToMany('App\Models\Item');
+    }
 }
