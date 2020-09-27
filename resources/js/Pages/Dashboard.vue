@@ -119,7 +119,7 @@ export default {
 
   computed: {
     progressClasses() {
-      var progress = $page.user.dailypoints / 10;
+      var progress = 2 / 10;
       console.log(progress);
       if (progress == 0) return "w-0";
       if (progress == 0.1) return "w-1/10";
