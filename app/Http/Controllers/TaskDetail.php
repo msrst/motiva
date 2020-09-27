@@ -50,6 +50,33 @@ class TaskDetail extends Controller
         // simple rights management
         assert($teacher->is_teacher);
 
+        $request->validate([
+            'task_id' => ['required', 'integer'],
+            'user_id' => ['required', 'integer'],
+            'done' => ['required', 'boolean'],
+        ]);
+
+        $done = $request->input('done');
+        $task_user = TaskUser::where("task_id", $request->input('task_id'))
+                ->where("user_id", $request->input("user_id"))
+                ->first();
+        $user = User::where('id', $request->input("user_id"))
+                ->first();
+        if($done) {
+            # set it to undone again
+            $task_user->finished_date = NULL;
+
+            $user->points -= 1;
+        }
+        else {
+            # set it to done
+            $task_user->finished_date = time();
+
+            $user->points += 1;
+        }
+        $task_user->update();
+        $user->update();
+
         return back();
     }
 }

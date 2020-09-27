@@ -29,13 +29,13 @@ class CreateNewUser implements CreatesNewUsers
         return User::create([
             'name' => $input['name'],
             'email' => $input['email'],
-            'password' => Hash::make($input['password']), // TODO do that in frontend
+            'password' => Hash::make($input['password']),
             'teacher_id' => 1, // make everyone a student of dumbledore
-            'hair_id' => NULL,
-            'face_id' => NULL,
-            'torso_id' => NULL,
-            'legs_id' => NULL,
-            'accessory_id' => NULL,
+            'hair_id' => 0,
+            'face_id' => 0,
+            'torso_id' => 0,
+            'legs_id' => 0,
+            'accessory_id' => 0
         ]);
     }
 }
