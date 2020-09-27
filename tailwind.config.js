@@ -24,12 +24,16 @@ module.exports = {
                 '50': '50%',
                 '75': '75%',
                 'full': '100%',
+            },
+            height: {
+                128: '28em'
             }
-        }
+        },
+
     },
 
     variants: {
-        opacity: ["responsive", "hover", "focus", "disabled"]
+        opacity: ['responsive', 'hover', 'focus', 'disabled'],
     },
 
     plugins: [require("@tailwindcss/ui")]
