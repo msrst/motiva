@@ -82,7 +82,7 @@ class User extends Authenticatable
     public function teacher_tasks()
     {
         // uses the user_id foreign key of the tasks table
-        return $this->hasMany('App\Models\Task', 'student_id');
+        return $this->hasMany('App\Models\Task', 'user');
     }
 
     /**

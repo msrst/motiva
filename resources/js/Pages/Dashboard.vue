@@ -166,7 +166,6 @@
   </app-layout>
 </template>
 
-
 <script>
 import AppLayout from "./../Layouts/AppLayout";
 import Welcome from "./../Jetstream/Welcome";
@@ -174,7 +173,25 @@ import Welcome from "./../Jetstream/Welcome";
 export default {
   components: {
     AppLayout,
-    Welcome,
+    Welcome
   },
+
+  computed: {
+    progressClasses() {
+      const progress = 2 / 10;
+      console.log(progress);
+      if (progress == 0) return "w-0";
+      if (progress == 0.1) return "w-1/10";
+      if (progress == 0.2) return "w-1/5";
+      if (progress == 0.3) return "w-3/10";
+      if (progress == 0.4) return "w-2/5";
+      if (progress == 0.5) return "w-1/2";
+      if (progress == 0.6) return "w-3/5";
+      if (progress == 0.7) return "w-7/10";
+      if (progress == 0.8) return "w-4/5";
+      if (progress == 0.9) return "w-9/10";
+      return "w-full";
+    }
+  }
 };
 </script>
