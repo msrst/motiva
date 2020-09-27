@@ -13,8 +13,8 @@
             <tbody class="bg-gray-100">
               <tr class="hover:bg-white" v-for="student in students" style="cursor: pointer;" @click="toggle(task_id, student.id, student.done)">
                 <td class="border px-4 py-2">{{ student.name }}</td>
-                <td class="border px-4 py-2" v-if="student.done">DONE</td>
-                <td class="border px-4 py-2" v-if="!student.done">UNFINISHED</td>
+                <td class="border px-4 py-2" v-if="student.done"><img src="images/icon_finished.svg" style="height: 2em;" alt="FINISHED"/></td>
+                <td class="border px-4 py-2" v-if="!student.done"><img src="images/icon_unfinished.svg" style="height: 2em;" alt="UNFINISHED"/></td>
               </tr>
             </tbody>
           </table>
