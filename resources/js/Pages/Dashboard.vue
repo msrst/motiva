@@ -81,8 +81,8 @@
             <h2 class="ml-4 text-gray-700 text-2xl font-weight-bold">
               Tasks
             </h2>
-            <div class="px-64 py-8 bg-gray-300">
-              <div class=" bg-gray-200 rounded-md p-1">
+            <div class="px-4 py-6 bg-gray-300">
+              <div class=" bg-gray-200 p-1">
                 <div
                   class="bg-green text-s leading-none py-1 text-center text-white"
                   :class="progressClasses"
