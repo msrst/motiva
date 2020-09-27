@@ -8,6 +8,8 @@ use App\Models\User;
 use Inertia\Inertia;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class TaskController extends Controller
 {
@@ -28,12 +30,40 @@ class TaskController extends Controller
         }
         return Inertia::render('Tasks', [
             // return some more properties than only the tasks (just for test usage)
-            'test' => User::where('id', $teacher->id)->first(),
-            'test2' => User::find($teacher->id),
+            //'test' => User::where('id', $teacher->id)->first(),
+            //'test2' => User::find($teacher->id),
             'teacher_tasks' => $tasks_array,
             //'student_tasks' => User::find(Auth::id())->student_tasks,
             //'student_items' => User::find(Auth::id())->student_items,
             'students_count' => User::where('teacher_id', NULL)->count(),
         ]);
+    }
+
+    public function store(Request $request)
+    {
+        $teacher = Auth::user();
+        // simple rights management
+        assert($teacher->is_teacher);
+
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'days' => ['required', 'integer', 'max:365'],
+        ]);
+
+        $now = time();
+        $due_date = time() + strtotime(sprintf("+%d days", $request->input('days')));
+        $task = Task::factory(1)->create(['user' => $teacher->id,
+                 'name' => $request->input('name'), 
+                 'assignment_date' => $now, 
+                 'due_date' => $due_date]);
+
+        foreach(User::where('teacher_id', $teacher->id) as $student) {
+            TaskUser::factory(1)->create(['user_id' => $student->id,
+                    'task_id' => $task->id,
+                    'assignment_date' => strtotime('27.09.2020'),
+                    'finished_date' => NULL]);
+        }
+
+        return back();
     }
 }
