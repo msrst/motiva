@@ -94,7 +94,7 @@
           </div>
 
           <div
-            class="w-50 shadow-lg rounded-lg bg-gray-300 ml-32 overflow-y-auto h-60"
+            class="w-50 h-80 shadow-lg rounded-lg bg-gray-300 ml-32 overflow-y-auto h-60"
           >
             <table class="px-64">
               <tr class="bg-gray-500 p-8">
@@ -166,6 +166,19 @@
                 </td>
 
                 <td class="p-8">Sam</td>
+                <td class="p-8">200</td>
+              </tr>
+               <tr>
+                <td class="p-8">#5</td>
+                <td>
+                  <img
+                    class="w-5 h-320 mx-auto object-cover"
+                    src="https://media.discordapp.net/attachments/759407593822093332/759520636740960276/untitled_4.png"
+                    alt="avatar"
+                  />
+                </td>
+
+                <td class="p-8">Sam3</td>
                 <td class="p-8">200</td>
               </tr>
             </table>
