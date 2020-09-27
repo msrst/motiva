@@ -101,7 +101,8 @@
                     <div
                         class="w-full shadow-lg rounded-lg overflow-hidden my-4 bg-gray-300 ml-32 mt-16"
                     >
-                        <div class="px-64 py-48 bg-gray-300"></div>
+                        <div class="px-64 py-48 bg-gray-300"></div><div>text </div>
+
 
                         <!-- component -->
                     </div>
