@@ -45,15 +45,22 @@
         </li>
     </ul>
     </div>
-
-    <div class="max-w-sm shadow-lg rounded-lg overflow-hidden my-4 bg-gray-300 ml-32">
-        <div class="px-6 py-3 bg-gray-700">
-            <h1 class="text-center text-white font-semibold text-lg">{{$page.user.name}}</h1>
+    <ul>
+    <div class="h-3200 w-320  shadow-lg rounded-lg overflow-hidden my-4 bg-gray-300 ml-32">
+        <div class="px-6 py-3 bg-gray-300">
         </div>
 
         <!-- component -->
 
     </div>
+    <div class="h-3200 w-320 shadow-lg rounded-lg overflow-hidden my-4 bg-gray-300 ml-32">
+        <div class="px-6 py-3 bg-gray-300">
+        </div>
+
+        <!-- component -->
+
+    </div>
+    </ul>
     </li>
       </template>
   </app-layout>
