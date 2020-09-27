@@ -51,7 +51,7 @@
                 class="select-none cursor-pointer bg-gray-200 rounded-md flex flex-1 items-center p-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
               >
                 <div class="flex-1 pl-1 mr-16">
-                  <div class="font-medium">Weekly Points</div>
+                  <div class="font-medium">Weekly Points: 10</div>
                 </div>
                 <div class="text-gray-600 text-s">
                   {{ $page.user.weeklypoints }}
@@ -74,9 +74,9 @@
         </div>
         <ul>
           <div
-            class="px-8 shadow-lg rounded-lg overflow-hidden my-4 bg-gray-300 ml-32 mt-16"
+            class="h-3200 max-w-full shadow-lg rounded-lg overflow-hidden my-4 bg-gray-300 ml-32"
           >
-            <h2 class="text-gray-700 text-2xl font-weight-bold">Tasks</h2>
+            <h2 class="ml-4 text-gray-700 text-2xl font-weight-bold">Tasks</h2>
             <div class="px-4 py-6 bg-gray-300">
               <div class="bg-gray-200 p-1">
                 <div
@@ -92,14 +92,14 @@
           </div>
 
           <div
-            class="mt-16 shadow-lg rounded-lg bg-gray-300 ml-32 overflow-y-auto h-60"
+            class="w-50 h-80 shadow-lg rounded-lg bg-gray-300 ml-32 overflow-y-auto h-60"
           >
             <table class="px-64">
               <tr class="bg-gray-500 p-8">
-                <td class="bg-gray-500 p-8"></td>
-                <td class="w-full p-8">Ranking Table</td>
-                <td class="bg-gray-500 p-8"></td>
-                <td class="bg-gray-500 p-8"></td>
+                <td class="p-8"></td>
+                <td class="p-8">Ranking Table</td>
+                <td class="p-8"></td>
+                <td class="p-8"></td>
               </tr>
               <tr>
                 <td class="p-8">#1</td>
@@ -127,7 +127,7 @@
                 <td class="p-8">Sam</td>
                 <td class="p-8">200</td>
               </tr>
-              <tr>
+               <tr>
                 <td class="p-8">#3</td>
                 <td>
                   <img
@@ -140,7 +140,7 @@
                 <td class="p-8">Sam</td>
                 <td class="p-8">200</td>
               </tr>
-              <tr>
+               <tr>
                 <td class="p-8">#4</td>
                 <td>
                   <img
@@ -153,7 +153,7 @@
                 <td class="p-8">Sam</td>
                 <td class="p-8">200</td>
               </tr>
-              <tr>
+               <tr>
                 <td class="p-8">#5</td>
                 <td>
                   <img
@@ -166,7 +166,7 @@
                 <td class="p-8">Sam</td>
                 <td class="p-8">200</td>
               </tr>
-              <tr>
+               <tr>
                 <td class="p-8">#5</td>
                 <td>
                   <img
@@ -183,6 +183,7 @@
 
             <!-- component -->
           </div>
+          
         </ul>
       </li>
     </template>
@@ -196,7 +197,7 @@ import Welcome from "./../Jetstream/Welcome";
 export default {
   components: {
     AppLayout,
-    Welcome
+    Welcome,
   },
 
   computed: {
@@ -214,7 +215,7 @@ export default {
       if (progress == 0.8) return "w-4/5";
       if (progress == 0.9) return "w-9/10";
       return "w-full";
-    }
-  }
+    },
+  },
 };
 </script>
