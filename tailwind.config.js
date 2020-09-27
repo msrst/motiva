@@ -17,6 +17,9 @@ module.exports = {
                 green: '#1aae9f',
                 yellow: '#F7C325',
                 red: '#de3618',
+            },
+            height: {
+                128: '28em'
             }
         },
 

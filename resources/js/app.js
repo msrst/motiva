@@ -11,10 +11,20 @@ Vue.use(InertiaForm);
 Vue.use(PortalVue);
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faTachometerAlt, faTasks, faUsers, faUser, faSignOutAlt, faSadTear, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+import {
+    faTachometerAlt,
+    faTasks,
+    faUsers,
+    faUser,
+    faSignOutAlt,
+    faSadTear,
+    faCheckCircle,
+    faArrowUp, faArrowDown, faPizzaSlice, faCheckSquare, faClipboardCheck
+} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faTachometerAlt, faTasks, faUsers, faUser, faSignOutAlt, faSadTear, faCheckCircle )
+library.add(faTachometerAlt, faTasks, faUsers, faUser, faSignOutAlt, faSadTear, faCheckCircle, faArrowUp, faArrowDown,
+    faPizzaSlice, faCheckSquare, faClipboardCheck)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
