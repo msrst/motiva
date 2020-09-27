@@ -6,6 +6,12 @@
 
     <div>
       <avatar-edit :items="$page.items"></avatar-edit>
+      <div
+        class="max-w-full shadow-lg rounded-lg overflow-hidden my-5 mx-64 bg-gray-400 p-5"
+      >
+        "test"
+      </div>
+
       <div class="flex justify-center">
         <jet-button
           type="button"
