@@ -18,17 +18,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $teacher = User::factory(1)->create(['teacher_id' => NULL, 
-                'name' => 'Dumbledore', 
-                'email' => 'dumbledore@h', 
+        $teacher = User::factory(1)->create(['teacher_id' => NULL,
+                'name' => 'Dumbledore',
+                'email' => 'dumbledore@h',
                 'password' => Hash::make('123')]);
-        User::factory(1)->create(['teacher_id' => 1, 
-                'name' => 'Harry', 
+        User::factory(1)->create(['teacher_id' => 1,
+                'name' => 'Harry',
                 'email' => 'harry@h',
                 'password' => Hash::make('456')]);
 
-        Task::factory(1)->create(['user' => 1, 
-                'name' => 'numbers', 
+        Task::factory(1)->create(['user' => 1,
+                'name' => 'numbers',
                 'assignment_date' => strtotime('27.09.2020'),
                 'due_date' => strtotime('30.09.2020')]);
 
@@ -37,11 +37,26 @@ class DatabaseSeeder extends Seeder
                 'assignment_date' => strtotime('27.09.2020'),
                 'finished_date' => NULL]);
 
-        $base = '\/images';
-        Item::factory(1)->create(['name' => 'Blue Shirt', 'img_location' => "$base\/Blue Shirt Default.svg", 'type' => "Torso"]);
-        Item::factory(1)->create(['name' => 'Pants', 'img_location' => "$base\/Pants Default.svg", 'type' => "Legs"]);
-        Item::factory(1)->create(['name' => 'Pigtail', 'img_location' => "$base\/Pigtail.svg", 'type' => "Head"]);
-        Item::factory(1)->create(['name' => 'Pink Shirt', 'img_location' => "$base\/Pink Shirt Default.svg", 'type' => "Torso"]);
-        Item::factory(1)->create(['name' => 'Skirt', 'img_location' => "$base\/Skirt Default.svg", 'type' => "Legs"]);
+        $base = '/images';
+
+        // Hairs
+        Item::factory(1)->create(['name' => 'Bald', 'url' => null, 'type' => "hair"]);
+        Item::factory(1)->create(['name' => 'Pigtail', 'url' => "$base/pigtail.svg", 'type' => "hair"]);
+
+        // Faces
+        Item::factory(1)->create(['name' => 'No Face', 'url' => null, 'type' => "face"]);
+
+        // Bodies
+        Item::factory(1)->create(['name' => 'Topless', 'url' => null, 'type' => "body"]);
+        Item::factory(1)->create(['name' => 'Blue Shirt', 'url' => "$base/shirt_blue.svg", 'type' => "body"]);
+        Item::factory(1)->create(['name' => 'Pink Shirt', 'url' => "$base/shirt_pink.svg", 'type' => "body"]);
+
+        // Legs
+        Item::factory(1)->create(['name' => 'Bottomless', 'url' => null, 'type' => "legs"]);
+        Item::factory(1)->create(['name' => 'Pants', 'url' => "$base/pants_default.svg", 'type' => "legs"]);
+        Item::factory(1)->create(['name' => 'Skirt', 'url' => "$base/skirt_default.svg", 'type' => "legs"]);
+
+        // Accessories
+        Item::factory(1)->create(['name' => 'No Accessory', 'url' => null, 'type' => "accessory"]);
     }
 }
