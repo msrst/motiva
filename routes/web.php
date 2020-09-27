@@ -26,10 +26,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function() {
         if(Auth::user()->teacher_id == NULL) {
             return redirect('/tasks');
         }
-        return Inertia\Inertia::render('Dashboard', ['items' => Item::all(), 'users' => User::latest()->get()]);
+        return Inertia\Inertia::render('Dashboard', ['items' => Item::all(), 'users' => User::orderBy('points', 'desc')->get()]);
     })->name('dashboard');
     Route::get('/community', function () {
-        return Inertia\Inertia::render('Community');
+        return Inertia\Inertia::render('Community', ['items' => Item::all(), 'users' => User::orderBy('points', 'desc')->get()]);
     })->name('community');
     Route::resources([
         'tasks' => \App\Http\Controllers\TaskController::class,
