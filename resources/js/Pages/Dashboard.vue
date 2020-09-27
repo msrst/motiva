@@ -96,7 +96,7 @@
           >
             <table class="px-64">
               <tr class="bg-gray-500 p-8">
-                <td class="w-full text-gray-100 py-4 px-12 text-2xl">
+                <td class="w-full text-gray-100 py-4 px-8 text-2xl">
                   Ranking Table
                 </td>
                 <td class="bg-gray-500 p-8"></td>
