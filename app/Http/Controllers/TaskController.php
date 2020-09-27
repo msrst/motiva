@@ -35,7 +35,7 @@ class TaskController extends Controller
             'teacher_tasks' => $tasks_array,
             //'student_tasks' => User::find(Auth::id())->student_tasks,
             //'student_items' => User::find(Auth::id())->student_items,
-            'students_count' => User::where('teacher_id', NULL)->count(),
+            'students_count' => User::where('teacher_id', $teacher->id)->count(),
         ]);
     }
 

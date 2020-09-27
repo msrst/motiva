@@ -54,15 +54,15 @@ class DatabaseSeeder extends Seeder
 
         User::factory(15)->create(['teacher_id' => 1]);
 
-        Task::factory(1)->create(['user' => 1,
-                'name' => 'numbers',
-                'assignment_date' => strtotime('27.09.2020'),
-                'due_date' => strtotime('30.09.2020')]);
+        // Task::factory(1)->create(['user' => 1,
+        //         'name' => 'numbers',
+        //         'assignment_date' => strtotime('27.09.2020'),
+        //         'due_date' => strtotime('30.09.2020')]);
 
-        TaskUser::factory(1)->create(['user_id' => 1,
-                'task_id' => 1,
-                'assignment_date' => strtotime('27.09.2020'),
-                'finished_date' => NULL]);
+        // TaskUser::factory(1)->create(['user_id' => 1,
+        //         'task_id' => 1,
+        //         'assignment_date' => strtotime('27.09.2020'),
+        //         'finished_date' => NULL]);
 
    }
 }
