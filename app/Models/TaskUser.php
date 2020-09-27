@@ -5,18 +5,27 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Task extends Model
+class TaskUser extends Model
 {
     use HasFactory;
+ 
+    public $timestamps = false;
+       
 
+    /**
+     * The corresponding SQL table (without an 's' at the end to
+     * faciliate the student <-> task relationship)
+     */
+    protected $table = 'task_user';
+    
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name',
-        'user',
+        'task_id',
+        'user_id', // the student's id
     ];
 
     /**
@@ -26,6 +35,6 @@ class Task extends Model
      */
     protected $casts = [
         'assignment_date' => 'datetime',
-        'due_date' => 'datetime',
+        'finished_date' => 'datetime', // NULL if not finished yet
     ];
 }

@@ -9,18 +9,21 @@
                         href="/dashboard"
                         :active="$page.currentRouteName == 'dashboard'"
                         icon="tachometer-alt"
+                        v-if="! $page.user.is_teacher"
                     >
                     </m-nav-link>
                     <m-nav-link
                         href="/tasks"
                         :active="$page.currentRouteName == 'tasks.index'"
                         icon="tasks"
+                        v-if="$page.user.is_teacher"
                     >
                     </m-nav-link>
                     <m-nav-link
                         href="/community"
                         :active="$page.currentRouteName == 'community'"
                         icon="users"
+                        v-if="! $page.user.is_teacher"
                     >
                     </m-nav-link>
                     <m-nav-link
