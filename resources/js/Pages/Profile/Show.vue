@@ -1,49 +1,54 @@
 <template>
-    <app-layout>
-        <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Profile
-            </h2>
-        </template>
+  <app-layout>
+    <template #header>
+      <h2 class="font-semibold text-xl text-gray-800 leading-tight">Profile</h2>
+    </template>
 
-        <div>
-            <avatar>
-            </avatar>
-            <jet-button type="button" @click.native="showExtraInformation=!showExtraInformation">
-                Account Settings
-            </jet-button>   
-            <div v-if="showExtraInformation" class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
-                <update-profile-information-form
-                            :name="$page.user.name"
-                            :email="$page.user.email" />
+    <div>
+      <avatar> </avatar>
+      <jet-button
+        class="text-center"
+        type="button"
+        @click.native="showExtraInformation = !showExtraInformation"
+      >
+        Account Settings
+      </jet-button>
+      <div
+        v-if="showExtraInformation"
+        class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8"
+      >
+        <update-profile-information-form
+          :name="$page.user.name"
+          :email="$page.user.email"
+        />
 
-                <update-password-form class="mt-10 sm:mt-0" />
-            </div>
-        </div>
-    </app-layout>
+        <update-password-form class="mt-10 sm:mt-0" />
+      </div>
+    </div>
+  </app-layout>
 </template>
 
 <script>
-    import AppLayout from './../../Layouts/AppLayout'
-    import UpdatePasswordForm from './UpdatePasswordForm'
-    import UpdateProfileInformationForm from './UpdateProfileInformationForm'
-    import JetButton from  './../../Jetstream/Button'
-    import Avatar from './../../Components/Avatar'
+import AppLayout from "./../../Layouts/AppLayout";
+import UpdatePasswordForm from "./UpdatePasswordForm";
+import UpdateProfileInformationForm from "./UpdateProfileInformationForm";
+import JetButton from "./../../Jetstream/Button";
+import Avatar from "./../../Components/Avatar";
 
-    export default {
-        props: ['sessions'],
+export default {
+  props: ["sessions"],
 
-        components: {
-            AppLayout,
-            UpdatePasswordForm,
-            UpdateProfileInformationForm,
-            JetButton,
-            Avatar
-        },
-        data(){
-            return {
-                showExtraInformation: false
-            }
-        }
-    }
+  components: {
+    AppLayout,
+    UpdatePasswordForm,
+    UpdateProfileInformationForm,
+    JetButton,
+    Avatar,
+  },
+  data() {
+    return {
+      showExtraInformation: false,
+    };
+  },
+};
 </script>
