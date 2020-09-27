@@ -31,7 +31,7 @@
                   {{ $page.user.dailypoints }}/10
                 </div>
               </div>
-              <div class="mx-auto pt-3">
+              <div class="mx-auto pt-1">
                 <font-awesome-icon
                   icon="sad-tear"
                   v-if="$page.user.dailypoints < 10"
@@ -74,7 +74,7 @@
         </div>
         <ul>
           <div
-            class="px-8 shadow-lg rounded-lg overflow-hidden my-4 bg-gray-300 ml-32 mt-16"
+            class="px-8 shadow-lg rounded-lg overflow-hidden my-4 bg-gray-300 ml-32 mt-4"
           >
             <h2 class="text-gray-700 text-2xl font-weight-bold">Tasks</h2>
             <div class="px-4 py-6 bg-gray-300">
@@ -92,12 +92,14 @@
           </div>
 
           <div
-            class="mt-16 shadow-lg rounded-lg bg-gray-300 ml-32 overflow-y-auto h-60"
+            class="mt-16 shadow-lg rounded-lg bg-gray-300 ml-32 overflow-y-auto h-2/3"
           >
             <table class="px-64">
               <tr class="bg-gray-500 p-8">
+                <td class="w-full text-gray-100 py-4 px-16 text-2xl">
+                  Ranking Table
+                </td>
                 <td class="bg-gray-500 p-8"></td>
-                <td class="w-full p-8">Ranking Table</td>
                 <td class="bg-gray-500 p-8"></td>
                 <td class="bg-gray-500 p-8"></td>
               </tr>
@@ -124,8 +126,8 @@
                   />
                 </td>
 
-                <td class="p-8">Sam</td>
-                <td class="p-8">200</td>
+                <td class="p-8">Hermione</td>
+                <td class="p-8">240</td>
               </tr>
               <tr>
                 <td class="p-8">#3</td>
@@ -137,8 +139,8 @@
                   />
                 </td>
 
-                <td class="p-8">Sam</td>
-                <td class="p-8">200</td>
+                <td class="p-8">Ron</td>
+                <td class="p-8">130</td>
               </tr>
               <tr>
                 <td class="p-8">#4</td>
@@ -150,8 +152,8 @@
                   />
                 </td>
 
-                <td class="p-8">Sam</td>
-                <td class="p-8">200</td>
+                <td class="p-8">Draco</td>
+                <td class="p-8">100</td>
               </tr>
               <tr>
                 <td class="p-8">#5</td>
@@ -164,7 +166,7 @@
                 </td>
 
                 <td class="p-8">Sam</td>
-                <td class="p-8">200</td>
+                <td class="p-8">10</td>
               </tr>
               <tr>
                 <td class="p-8">#5</td>
@@ -176,8 +178,8 @@
                   />
                 </td>
 
-                <td class="p-8">Sam3</td>
-                <td class="p-8">200</td>
+                <td class="p-8">Sam2</td>
+                <td class="p-8">9</td>
               </tr>
             </table>
 
@@ -201,7 +203,7 @@ export default {
 
   computed: {
     progressClasses() {
-      const progress = 2 / 10;
+      const progress = this.$page.user.dailypoints / 10;
       console.log(progress);
       if (progress == 0) return "w-0";
       if (progress == 0.1) return "w-1/10";
