@@ -76,7 +76,19 @@
           <div
             class="h-3200 max-w-full shadow-lg rounded-lg overflow-hidden my-4 bg-gray-300 ml-32"
           >
-            <div class="px-6 py-3 bg-gray-300"></div>
+            <h2 class="ml-4 text-gray-700 text-2xl font-weight-bold">
+              Tasks
+            </h2>
+            <div class="px-4 py-6 bg-gray-300">
+              <div class=" bg-gray-200 p-1">
+                <div
+                  class="bg-green text-s leading-none py-1 text-center text-white"
+                  :class="progressClasses"
+                >
+                  {{ $page.user.dailypoints }}/10
+                </div>
+              </div>
+            </div>
 
             <!-- component -->
           </div>

@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class TaskUser extends Model
 {
     use HasFactory;
+ 
+    public $timestamps = false;
+       
 
     /**
      * The corresponding SQL table (without an 's' at the end to
