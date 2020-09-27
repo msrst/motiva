@@ -74,9 +74,9 @@
         </div>
         <ul>
           <div
-            class="h-3200 max-w-full shadow-lg rounded-lg overflow-hidden my-4 bg-gray-300 ml-32"
+            class="px-8 shadow-lg rounded-lg overflow-hidden my-4 bg-gray-300 ml-32 mt-16"
           >
-            <h2 class="ml-4 text-gray-700 text-2xl font-weight-bold">Tasks</h2>
+            <h2 class="text-gray-700 text-2xl font-weight-bold">Tasks</h2>
             <div class="px-4 py-6 bg-gray-300">
               <div class="bg-gray-200 p-1">
                 <div
@@ -92,14 +92,14 @@
           </div>
 
           <div
-            class="w-50 h-80 shadow-lg rounded-lg bg-gray-300 ml-32 overflow-y-auto h-60"
+            class="mt-16 shadow-lg rounded-lg bg-gray-300 ml-32 overflow-y-auto h-60"
           >
             <table class="px-64">
               <tr class="bg-gray-500 p-8">
-                <td class="p-8"></td>
-                <td class="p-8">Ranking Table</td>
-                <td class="p-8"></td>
-                <td class="p-8"></td>
+                <td class="bg-gray-500 p-8"></td>
+                <td class="w-full p-8">Ranking Table</td>
+                <td class="bg-gray-500 p-8"></td>
+                <td class="bg-gray-500 p-8"></td>
               </tr>
               <tr>
                 <td class="p-8">#1</td>
@@ -127,7 +127,7 @@
                 <td class="p-8">Sam</td>
                 <td class="p-8">200</td>
               </tr>
-               <tr>
+              <tr>
                 <td class="p-8">#3</td>
                 <td>
                   <img
@@ -140,7 +140,7 @@
                 <td class="p-8">Sam</td>
                 <td class="p-8">200</td>
               </tr>
-               <tr>
+              <tr>
                 <td class="p-8">#4</td>
                 <td>
                   <img
@@ -153,7 +153,7 @@
                 <td class="p-8">Sam</td>
                 <td class="p-8">200</td>
               </tr>
-               <tr>
+              <tr>
                 <td class="p-8">#5</td>
                 <td>
                   <img
@@ -166,7 +166,7 @@
                 <td class="p-8">Sam</td>
                 <td class="p-8">200</td>
               </tr>
-               <tr>
+              <tr>
                 <td class="p-8">#5</td>
                 <td>
                   <img
