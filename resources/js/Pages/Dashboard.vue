@@ -51,7 +51,7 @@
                 class="select-none cursor-pointer bg-gray-200 rounded-md flex flex-1 items-center p-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
               >
                 <div class="flex-1 pl-1 mr-16">
-                  <div class="font-medium">Weekly Points: 10</div>
+                  <div class="font-medium">Weekly Points</div>
                 </div>
                 <div class="text-gray-600 text-s">
                   {{ $page.user.weeklypoints }}
@@ -97,7 +97,6 @@
 
             <!-- component -->
           </div>
-          <div>text</div>
         </ul>
       </li>
     </template>
@@ -111,7 +110,7 @@ import Welcome from "./../Jetstream/Welcome";
 export default {
   components: {
     AppLayout,
-    Welcome,
+    Welcome
   },
 
   computed: {
@@ -129,7 +128,7 @@ export default {
       if (progress == 0.8) return "w-4/5";
       if (progress == 0.9) return "w-9/10";
       return "w-full";
-    },
-  },
+    }
+  }
 };
 </script>
