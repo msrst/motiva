@@ -5,10 +5,10 @@
       <!-- component -->
       <li class="flex flex-row">
         <div
-          class="max-w-full shadow-lg rounded-lg overflow-hidden my-4 bg-gray-300 ml-32"
+          class="max-w-full shadow-lg rounded-lg overflow-hidden my-16 bg-gray-300 ml-32"
         >
           <img
-            class="w-32 h-320 mx-auto object-cover object-center"
+            class="w-32 mx-auto object-cover object-center"
             src="https://media.discordapp.net/attachments/759407593822093332/759520636740960276/untitled_4.png"
             alt="avatar"
           />
@@ -74,7 +74,7 @@
         </div>
         <ul>
           <div
-            class="px-8 shadow-lg rounded-lg overflow-hidden my-4 bg-gray-300 ml-32 mt-4"
+            class="w-full px-8 shadow-lg rounded-lg overflow-hidden my-4 bg-gray-300 ml-32 mt-16"
           >
             <h2 class="text-gray-700 text-2xl font-weight-bold">Tasks</h2>
             <div class="px-4 py-6 bg-gray-300">
@@ -92,7 +92,7 @@
           </div>
 
           <div
-            class="mt-16 shadow-lg rounded-lg bg-gray-300 ml-32 overflow-y-auto h-2/3"
+            class="w-full mt-16 shadow-lg rounded-lg bg-gray-300 ml-32 overflow-y-auto h-2/3"
           >
             <table class="px-64">
               <tr class="bg-gray-500 p-8">
