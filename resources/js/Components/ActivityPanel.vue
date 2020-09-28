@@ -38,12 +38,12 @@
             </div>
                 <div>
                 <font-awesome-icon icon="clipboard-check" class="text-green"></font-awesome-icon>
-                <span>{{ justFinishedUsers[index].name + ' has just finished '}}</span>
-                <span class="font-bold">{{item.activity}}</span>
+                <span>{{ justFinishedUsersCustom[index].name + ' has just finished '}}</span>
+                <span class="font-bold">{{justFinishedUsersCustom[index].activity}}</span>
                 <span> for the past </span>
-                <span>{{ justFinishedUsers[index].time }}</span>
+                <span>{{ justFinishedUsersCustom[index].time }}</span>
                 <span> and will now </span>
-                <span>{{ justFinishedUsers[index].newActivity }}</span>
+                <span>{{ justFinishedUsersCustom[index].newActivity }}</span>
             </div>
         </div>
     </div>
